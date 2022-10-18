@@ -1,0 +1,117 @@
+.navbar{
+    min-width: 100%;
+    height: 63px;
+    position: relative;
+}
+.navbar>*{
+    position: absolute;
+    top:7px;
+}
+/*----- menu icon -----*/
+.menu_icon{
+    width: 1.3vw;
+    top:3.5vh;
+    left: 2vw;
+    display: grid;
+    gap: 5px;
+}
+.menu_icon >div{
+    height: 1px;
+    background-color: #fff;
+}
+/*------- logo  --------*/
+.logo{
+    width: 7.2vw; 
+    height: 38px;
+    display: flex;
+    top:1.6vh;
+    left: 5.2vw;
+}
+.logo>svg{
+    width: 100%;
+    fill: white;
+}
+.logo>sup{
+    font-size: 11px;
+    color:rgba(255, 255, 255, 0.5);
+}
+/* ---- search_box ---- */
+.search_box{
+    width: 48.5vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    left:26vw
+}
+.search_bar{
+    font-family: 'Poppins';
+    width: 85%;
+    color:white;
+    background: rgb(14, 13, 13);
+    outline: none;
+    font-size: 16px;
+    padding: 6px;
+    border: 1px solid #353535;
+}
+.search_bar::-webkit-search-cancel-button{
+    appearance: none;
+  height: 24px;
+  width: 24px;
+  filter: brightness(200%);
+  margin-left: .4em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  cursor: pointer;
+}
+.search_bar:focus{
+    border-color: rgb(0, 99, 212);
+}
+.search_bar::placeholder{
+    color: rgba(255, 255, 255, 0.63);
+}
+.search_box svg,.auth svg{
+    fill: white;
+    color: white;
+}
+.search_btn{
+    box-sizing: content-box;
+    width: 24px;
+    background: #353535;
+    border: 1px solid #353535;
+    padding: 7px 18px;
+}
+.mic{
+    box-sizing: content-box;
+    width: 24px;
+    background: rgb(17, 17, 17);
+    padding: 9px;
+    margin-left: 8px;
+    border-radius: 10em;
+}
+
+/* ------ auth  ------ */
+.auth{
+    width: 9vw;
+    height: 50px;
+    top:0.7vh;
+    right: 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.auth svg{
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1;
+}
+.user_dp{
+    border-radius: 5em;
+    width: 32px;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+.user_dp:hover{
+    outline: 1px solid rgb(0, 99, 212);
+}
+.auth img{
+    width: 100%;
+}

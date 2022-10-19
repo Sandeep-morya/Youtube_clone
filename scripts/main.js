@@ -123,4 +123,4 @@ function open_sidebar(){
     slabel.forEach(e=>e.style="");
     home_icon.style="";
 }
-appendMovies(data.playlist)
+search_list('trending',50)

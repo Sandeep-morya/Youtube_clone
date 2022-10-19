@@ -12,23 +12,23 @@ let sidebar=document.querySelector('.sidebar');
 
 /*-------- appending details of clicked movies--------*/
 function appendata(obj){
-        let video=document.createElement('iframe');
-        video.className='iframe';
-        video.src=`https://www.youtube.com/embed/${obj.videoId}`
+    let video=document.createElement('iframe');
+    video.className='iframe';
+    video.src=`https://www.youtube.com/embed/${obj.videoId}`
 
-        let info=document.createElement('div');
-        info.className='info';
+    let info=document.createElement('div');
+    info.className='info';
 
-        let video_title=document.createElement('div');
-        video_title.className='vtitle';
-        video_title.textContent=obj.title;
+    let video_title=document.createElement('div');
+    video_title.className='vtitle';
+    video_title.textContent=obj.title;
 
-        let channel_name=document.createElement('div');
-        channel_name.className='cname';
-        channel_name.textContent=obj.name;
+    let channel_name=document.createElement('div');
+    channel_name.className='cname';
+    channel_name.textContent=obj.name;
 
-        info.append(video_title,channel_name);
-        video_details.append(video,info);
+    info.append(video_title,channel_name);
+    video_details.append(video,info);
 }
 appendata(data);
 

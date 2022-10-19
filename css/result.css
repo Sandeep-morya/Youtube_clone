@@ -24,8 +24,6 @@
     padding:0 35px 0 25px ;
 }
 .card{
-    width: 100%;
-    height: min-content;
     display: grid;
     gap: 10px;
 }
@@ -54,6 +52,8 @@
     font-size: 14px;
 }
 .channel_name{
+    width: 72%;
+    margin-left: auto;
     grid-column: span 2;
     font-size: 14px;
 }

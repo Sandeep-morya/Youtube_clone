@@ -1,0 +1,70 @@
+.sidebar{
+    width: 18vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #232323;
+    z-index: 10;
+    position:absolute;
+    margin-left: -30%;
+    /* margin: 0; */
+    transition: all 0.5s;
+}
+.sidebar>div{
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    padding-left: 5vh;
+    cursor: pointer;
+}
+.sidebar svg{
+    fill: white;
+}
+
+.icon{
+    width:24px;
+    height: 24px;
+    aspect-ratio: 1;
+}
+.icon svg{
+    width: 100%;
+}
+.label{
+    color: white;
+}
+.logo2{
+    width: 35%;
+    height: 10vh;
+    top:1vh;
+    display: flex;
+    position: relative;
+    left:1vw;
+}
+#sup{
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top:-6px;
+    font-size: 11px;
+    color:rgba(255, 255, 255, 0.5);
+}
+#menu{
+    padding-top: 10px;
+}
+.menu_btn{
+    box-sizing: content-box;
+    padding: 10px;
+    margin-top: -5px;
+    margin-left: -7px;
+    border-radius: 5em;
+    transition: all 0.3s;
+}
+.menu_btn:active{
+    outline: 1px solid #747272;
+    background-color: #474646;
+}
+.pad{
+    padding: 7px;
+}
+.pad:hover{
+    background-color: rgb(83, 83, 83);
+}

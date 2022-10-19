@@ -1,4 +1,4 @@
-import {navbar} from "../module.js";
+import {navbar,data} from "../module.js";
 /*-------------- Navbar ---------------*/
 let navbar_box=document.querySelector('.navbar');
 navbar_box.innerHTML=navbar;
@@ -15,6 +15,7 @@ let sidebar_child=document.querySelectorAll('.sidebar>div');
 let label=document.querySelectorAll('.label');
 let slabel=document.querySelectorAll('.slabel');
 let results=document.querySelector('.results');
+let home_icon=document.querySelector('.home');
 
 /*------------- search result -------------*/
 search_btn.addEventListener('click',e=>{
@@ -33,7 +34,7 @@ search_bar.addEventListener('keypress',e=>{
 /*------------- asyc function --------------*/
 const search_list= async(query,items)=>{
     try {
-        let temp= await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=${items}&order=relevance&q=${query}&key=AIzaSyBIQhgEq2siB8xOpXBaK7QFnV-dVjtf3Ns`);
+        let temp= await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=${items}&order=relevance&q=${query}&key=AIzaSyCfD99wvQraI_lL-RuPwmbydwoBJGn6a8U`);
         let res= await temp.json();
         appendMovies(res.items);
     } catch (e) {
@@ -43,13 +44,13 @@ const search_list= async(query,items)=>{
 /*----  funciton that is appendig list/grid to parent ----*/
 const appendMovies=(array)=>{
     search_result.innerHTML=null;
-    array.forEach(({snippet})=> {
+    array.forEach(({snippet, id:{videoId}})=> {
         let card=document.createElement('div');
         card.className='card';
         let thumbnail=document.createElement('img');
         thumbnail.src=snippet.thumbnails.high.url;
         thumbnail.addEventListener('click',function(){
-            let obj=new createObj(snippet,array);
+            let obj=new createObj(snippet,videoId,array);
             localStorage.setItem('selected',JSON.stringify(obj));
             location.href='./video.html'
         });
@@ -78,12 +79,11 @@ const appendMovies=(array)=>{
 }
 /*------ class to create Object -----*/
 class createObj{
-    constructor(x,y){
-        this.thumbnail=x.thumbnails.high.url;
+    constructor(x,y,z){
         this.title=x.title;
         this.name=x.channelTitle;
-        this.logo=x.thumbnails.high.url;
-        this.playlist=y;
+        this.videoId=y;
+        this.playlist=z;
     }
 }
 /*------ function redirect Home------*/
@@ -100,6 +100,7 @@ menu.addEventListener('click',e=>{
     active=true;
   }
 });
+
 function close_sidebar(){
     results.style.width='94.5%';
     sidebar.style.width='5.5%'
@@ -109,6 +110,7 @@ function close_sidebar(){
     });
     label.forEach(e=>e.style.display='none');
     slabel.forEach(e=>e.style.display='block');
+    home_icon.style.background='transparent';
 }
 function open_sidebar(){
     results.style="";
@@ -119,4 +121,6 @@ function open_sidebar(){
     });
     label.forEach(e=>e.style="");
     slabel.forEach(e=>e.style="");
+    home_icon.style="";
 }
+appendMovies(data.playlist)

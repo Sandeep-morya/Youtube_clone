@@ -1,5 +1,5 @@
-export let navbar=`
-<div class="menu_icon">
+export let data=JSON.parse(localStorage.getItem('selected'));
+export let navbar=`<div class="menu_icon">
   <div></div>
   <div></div>
   <div></div>

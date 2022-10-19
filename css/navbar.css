@@ -12,12 +12,20 @@
 }
 /*----- menu icon -----*/
 .menu_icon{
+    box-sizing: content-box;
     width: 1.3vw;
-    top:3.5vh;
-    left: 2vw;
+    top:1.5vh;
+    left: 1vw;
     display: grid;
     gap: 5px;
+    padding: 15px 13px;
+    border-radius: 5em;
     cursor: pointer;
+    transition: all 0.3s;
+}
+.menu_icon:active{
+    outline: 1px solid #747272;
+    background-color: #474646;
 }
 .menu_icon >div{
     height: 1px;

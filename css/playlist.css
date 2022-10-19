@@ -1,0 +1,33 @@
+.playlist{
+    width: 33%;
+}
+.controller,.list,.list_items{
+    width: 100%;
+}
+.controller{
+    height: 8vh;
+    border-top: 1px solid rgba(75, 75, 75, 0.658);
+    border-bottom: 1px solid rgba(75, 75, 75, 0.658);
+}
+.list_items{
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+}
+.thumb{
+    width: 45%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.pinfo{
+    width: 50%;
+    color: white;
+}
+.ptitle{
+    font-size: 14px;
+}
+.pname{
+    padding-top:5px;
+    font-size: 12px;
+}

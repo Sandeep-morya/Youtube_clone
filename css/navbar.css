@@ -1,7 +1,10 @@
 .navbar{
     min-width: 100%;
-    height: 63px;
-    position: relative;
+    height: 56px;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    background: #252525ec;
 }
 .navbar>*{
     position: absolute;
@@ -14,6 +17,7 @@
     left: 2vw;
     display: grid;
     gap: 5px;
+    cursor: pointer;
 }
 .menu_icon >div{
     height: 1px;
@@ -93,7 +97,7 @@
     width: 9vw;
     height: 50px;
     top:0.7vh;
-    right: 3vw;
+    right: 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;

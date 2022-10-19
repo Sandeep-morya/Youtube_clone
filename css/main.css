@@ -5,7 +5,18 @@
 body{
     margin: 0;
     width: 100vw;
+    background: #121212;
     overflow-x: hidden;
-    background: #202020;
     font-family: 'Poppins', sans-serif;
+}
+body::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 3px;
+}
+svg{
+    cursor: pointer;
 }

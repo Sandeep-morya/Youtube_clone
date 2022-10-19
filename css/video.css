@@ -1,0 +1,44 @@
+.content_main{
+    padding-top: 13vh;
+    width: 82%;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    background-color: ;
+    justify-content: space-between;
+}
+.vdetails{
+    width: 100%;
+    display: grid;
+    column-gap: 15px;
+    row-gap: 50px;
+    padding:0 35px 0 25px ;
+}
+.cards{
+    width: 100%;
+    height: min-content;
+    display: grid;
+    gap: 10px;
+}
+.cards>img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+.info{
+    width: 100%;
+    display: grid;
+    color:white;
+
+}
+.vtitle{
+    font-size: 16px;
+}
+.cname{
+    grid-column: span 2;
+    font-size: 16px;
+}
+.playlist{
+    border: 1px solid white;
+    width: 35%;
+}

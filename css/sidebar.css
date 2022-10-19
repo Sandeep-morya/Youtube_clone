@@ -4,20 +4,21 @@
     position: relative;
     justify-content: space-between;
     padding-top: 55px;
+    background: #252525e3;
 }
 .sidebar{
     background: #252525e3;
     /* width: 5.5%; */
     width: 18%;
     padding-bottom: 80vh;
-    top:9vh;
+    top:8vh;
     position:fixed;
     left: 0;
     display: grid;
     /*-- transition: all 0.1s; --*/
 }
-.sidebar div:nth-child(1){
-    margin-top: 7px;
+.sidebar>div:nth-child(1){
+    background-color: rgb(83, 83, 83);
 }
 .sidebar>div{
     width: 100%;
@@ -29,6 +30,7 @@
     grid-template-columns: 25fr 75fr;
     align-items: center;
     cursor: pointer;
+    
 }
 .sidebar>div:hover{
     background-color: rgb(83, 83, 83);

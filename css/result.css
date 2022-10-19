@@ -6,7 +6,7 @@
 }
 .controller{
     width: 100%;
-    height: 9.5vh;
+    height: 8vh;
     border-top: 1px solid rgba(75, 75, 75, 0.658);
     border-bottom: 1px solid rgba(75, 75, 75, 0.658);
     position:fixed;
@@ -20,7 +20,7 @@
     grid-template-columns: repeat(4,1fr);
     column-gap: 15px;
     row-gap: 50px;
-    margin-top: 10vh;
+    margin-top: 8vh;
     padding:0 35px 0 25px ;
 }
 .card{

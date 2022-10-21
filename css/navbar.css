@@ -99,31 +99,3 @@
     margin-left: 8px;
     border-radius: 10em;
 }
-
-/* ------ auth  ------ */
-.auth{
-    width: 9vw;
-    height: 50px;
-    top:0.7vh;
-    right: 2vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.auth svg{
-    width: 24px;
-    height: 24px;
-    aspect-ratio: 1;
-}
-.user_dp{
-    border-radius: 5em;
-    width: 32px;
-    aspect-ratio: 1;
-    overflow: hidden;
-}
-.user_dp:hover{
-    outline: 1px solid rgb(0, 99, 212);
-}
-.auth img{
-    width: 100%;
-}

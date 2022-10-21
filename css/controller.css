@@ -1,0 +1,20 @@
+.controller{
+    width: 83%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.controller>button{
+    padding: 10px 15px;
+    background: #373737;
+    color: white;
+    border: none;
+    outline:1px solid rgba(88, 88, 88, 0.829);
+    border-radius: 5em;
+    overflow: hidden;
+    font-size: 14px;  
+}
+.controller button:nth-child(1){
+    background-color: white;
+    color: black;
+}

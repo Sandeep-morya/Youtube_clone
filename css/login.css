@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    font-family: 'Quicksand';
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: #F5F7F6;
+}
+::selection{
+    background-color: rgba(0, 0, 0, 0.288);
+}
+.login_page{
+    width: 33%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0px #575656;
+    color: black;
+    display: grid;
+    place-items: center;
+}
+
+form{
+    width: 90%;
+    height: 30vh;
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+form>div{
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+form input{
+    padding: 15px 20px;
+    outline:1px solid grey;
+    border-radius: 3px;
+    background-color: none;
+    font-size: 16px;
+    border:none;
+}
+label{
+    position: absolute;
+    top: 30%;
+    left:8%;
+    color: rgb(54, 53, 53);
+    transition: all 0.2s;
+}
+ 
+.g_icon{
+    margin-left: 20px;
+}
+.g_icon svg{
+    margin-top: 40px;
+    width: 90px;
+    height: 30px;
+}
+.signin_text{
+    text-align: center;
+    padding-bottom:10px;
+}
+.login_dis{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 35px auto;
+    justify-content: space-between;
+}
+.login_dis span{
+    color:rgb(0, 99, 212);
+    font-weight: bold;
+}
+.login_dis button{
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    background-color: rgb(0, 99, 212);  
+}
+
+.login_dis>*{
+    cursor: pointer;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

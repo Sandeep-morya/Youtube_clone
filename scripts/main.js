@@ -1,4 +1,4 @@
-import {navbar,data} from "../module.js";
+import {navbar,search,loginId} from "../module.js";
 /*-------------- Navbar ---------------*/
 let navbar_box=document.querySelector('.navbar');
 navbar_box.innerHTML=navbar;
@@ -16,6 +16,11 @@ let label=document.querySelectorAll('.label');
 let slabel=document.querySelectorAll('.slabel');
 let results=document.querySelector('.results');
 let home_icon=document.querySelector('.home');
+let user_dp=document.querySelector('.user_dp');
+let glogin=document.querySelector('.glogin');
+let dots=document.querySelector('.dots');
+let create=document.querySelector('.create');
+let bell=document.querySelector('.bell');
 
 /*------------- search result -------------*/
 search_btn.addEventListener('click',e=>{
@@ -123,4 +128,28 @@ function open_sidebar(){
     slabel.forEach(e=>e.style="");
     home_icon.style="";
 }
-search_list('trending',50)
+
+/*------------- auth -------------*/
+if(loginId){
+    user_dp.style.display="flex";
+    create.style.display="block";
+    bell.style.display="block";
+    glogin.style.display='none';
+    dots.style.display='none';
+    user_dp.textContent=loginId[0];
+}
+glogin.addEventListener('click',()=>{
+    location.href='./login.html';
+});
+user_dp.addEventListener('click',()=>{
+    localStorage.removeItem('name');
+    user_dp.style.display="none";
+    create.style.display="none";
+    bell.style.display="none";
+    glogin.style.display='flex';
+    dots.style.display='flex';
+});
+
+
+/*----------- video list on page load -----------*/
+search_list(search,50);

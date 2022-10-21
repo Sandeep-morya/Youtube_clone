@@ -45,6 +45,9 @@
 }
 .channel_logo img{
     border-radius: 5em;
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1;
     width: 100%;
 }
 .video_title{

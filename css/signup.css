@@ -1,0 +1,41 @@
+.signup_div{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 2px 0 gray;
+}
+.login_page{
+    background-color: transparent;
+    width: 50%;
+    box-shadow: none;
+}
+.logo{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan{
+    width: 50%;
+    text-align: center;
+}
+form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+input{
+    padding: 10px !important;
+}
+label{
+    top:23%;
+    font-size: 15px;
+}
+.register{
+    font-size: 16px !important;
+}
+
+

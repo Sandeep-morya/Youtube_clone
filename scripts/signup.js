@@ -84,7 +84,7 @@ register.addEventListener("click", () => {
         if(!e){
           err(2);
           err(3);
-          error.textContent=`🧡 Need More Secure Usernmae & Password`;
+          error.textContent=`💔 Need More Secure Usernmae & Password`;
           input[2].value='';
           input[3].value='';
         }else{

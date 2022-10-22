@@ -4,6 +4,7 @@ const label = document.querySelectorAll("label");
 const go_signin = document.querySelector(".go_signin");
 const register = document.querySelector(".register");
 let error=document.querySelector('.err');
+const loader= document.querySelector('.loader');
 
 const anim = () => {
   input[0].addEventListener("focus", (e) => {
@@ -76,25 +77,29 @@ register.addEventListener("click", () => {
   if(!d)err(5);
   if(n && e && u && p && m && d){
     let x=user.signup(n, e, u, p, m, d);
-    x.then(e=>{
-      if(!e){
-        err(2);
-        err(3);
-        error.textContent=`🧡 Need More Secure Usernmae & Password`;
-        input[2].value='';
-        input[3].value='';
-      }else{
-        if(e[1]){
-          error.textContent=`💔 ${e[0]}`;
+    loader.style.display='block';
+    setTimeout(function(){
+      loader.style='';
+      x.then(e=>{
+        if(!e){
+          err(2);
+          err(3);
+          error.textContent=`🧡 Need More Secure Usernmae & Password`;
+          input[2].value='';
+          input[3].value='';
         }else{
-          error.textContent=`💚 New Account Created Successfully`;
+          if(e[1]){
+            error.textContent=`💔 ${e[0]}`;
+          }else{
+            error.textContent=`💚 New Account Created Successfully`;
+          }
+          input.forEach(el=>el.value='');
+          setTimeout(function(){
+            location.href='./login.html';
+          },1000);
         }
-        input.forEach(el=>el.value='');
-        setTimeout(function(){
-          location.href='./login.html';
-        },1000);
-      }
-    })
+      })
+    },1500)
   }
 });
 

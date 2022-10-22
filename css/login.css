@@ -14,13 +14,15 @@ body{
     background-color: rgba(0, 0, 0, 0.288);
 }
 .login_page{
-    width: 33%;
+    min-width: 33%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 5px 0px #575656;
     color: black;
     display: grid;
+    overflow: hidden;
     place-items: center;
+    position: relative;
 }
 
 form{

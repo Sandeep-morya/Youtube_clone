@@ -5,6 +5,7 @@ const label = document.querySelectorAll("label");
 const login_btn = document.querySelector(".login_btn");
 const create_btn = document.querySelector(".create_btn");
 let error=document.querySelector('.err');
+const loader= document.querySelector('.loader');
 
 input[0].addEventListener("focus", (e) => {
   animLabel(label[0], e);
@@ -39,12 +40,16 @@ login_btn.addEventListener("click", () => {
   if (!p) err(1);
   if (u && p) {
     let x = user.login(u, p);
-    x.then((e) => showProfile(u, e)).catch(e=>{
-      input[1].value=null;
-      err(0);
-      err(1); 
-      error.textContent="💔 Username and Password did`nt matched"
-    });
+    loader.style.display='block';
+    setTimeout(function(){
+      loader.style='';
+      x.then((e) => showProfile(u, e)).catch(e=>{
+        input[1].value=null;
+        err(0);
+        err(1); 
+        error.textContent="💔 Username and Password did`nt matched"
+      });
+    },1500)
   }
 });
 

@@ -4,6 +4,8 @@
     display: flex;
     border-radius: 5px;
     background: white;
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 0 2px 0 gray;
 }
 .login_page{

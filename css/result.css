@@ -24,7 +24,6 @@
     padding:0 35px 0 25px ;
 }
 .card{
-    display: grid;
     gap: 10px;
 }
 .card>img{
@@ -35,28 +34,25 @@
 .details{
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 3fr 7fr;
     color:white;
-    place-items: center;
 
 }
 .channel_logo{
+    align-self: flex-start;
     overflow: hidden;
+    grid-row: span 2;
+    display: flex;
 }
 .channel_logo img{
     border-radius: 5em;
-    width: 30px;
-    height: 30px;
+    width: 40px;
     aspect-ratio: 1;
-    width: 100%;
 }
 .video_title{
-    margin-left: 20px;
-    font-size: 14px;
+    font-size: 11px;
 }
 .channel_name{
-    width: 72%;
-    margin-left: auto;
-    grid-column: span 2;
-    font-size: 14px;
+    color: rgba(255, 255, 255, 0.329);
+    font-size: 10px;
 }
